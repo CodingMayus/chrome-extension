@@ -1,0 +1,45 @@
+{
+    "manifest_version": 3,
+    "name":"Social Media Blocker",
+    "version": "0.0.1",
+   
+    "background": {
+        "service_worker": "background.js"
+       
+    
+      },
+      "permissions": ["storage","activeTab","scripting","webNavigation"],
+    "content_scripts":[
+        {
+            "matches":["<all_urls>"],
+            "js":["Content.js"]
+          
+
+            
+        }
+
+    ] ,
+    "host_permissions": [
+      "https://*/*",
+      "http://*/*"
+  ]
+    
+    ,"action": {
+        "default_popup": "popup.html"
+      ,
+      "default_icon": {
+     
+        "128": "/icon1281.png"
+      }
+    }
+      ,
+        "icons": {
+         
+            "128": "/icon1281.png"
+  },
+
+  
+
+  "options_page": "options.html"
+
+}
