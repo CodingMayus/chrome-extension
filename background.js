@@ -4,7 +4,8 @@ let color = '#3aa757';
 
 chrome.runtime.onInstalled.addListener(() => {
   chrome.storage.sync.set({'bits':0});
-  
+  chrome.storage.sync.set({power:true})
+  chrome.storage.sync.set({color:"#00ff00"});
  
   
 
@@ -14,7 +15,7 @@ chrome.runtime.onInstalled.addListener(() => {
 
 
   //chrome.storage.sync.set({ color });
-  //chrome.tabs.create({'url': "http://127.0.0.1:5500/index.html"});
+  chrome.tabs.create({'url': "https://docs.google.com/document/d/1Vo4LuZFXS5vKjQNyIixMGPHOQB7OpJDw8UMvmYdiwmI/edit?usp=sharing"});
  // console.log('Default background color set to %cgreen', `color: ${color}`);
 })
 
@@ -27,6 +28,7 @@ const initStorageCache = getAllStorageSyncData().then(items => {
   // Copy the data retrieved from storage into storageCache.
   Object.assign(storageCache, items);
 });
+
 
 chrome.action.onClicked.addListener(async (tab) => {
   try {
