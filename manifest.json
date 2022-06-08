@@ -8,7 +8,7 @@
        
     
       },
-      "permissions": ["storage","activeTab","scripting","webNavigation"],
+      "permissions": ["storage"],
     "content_scripts":[
         {
             "matches":["<all_urls>"],
@@ -36,10 +36,6 @@
         "icons": {
          
             "128": "/icon1281.png"
-  },
-
-  
-
-  "options_page": "options.html"
+  }
 
 }
