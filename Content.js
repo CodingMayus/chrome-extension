@@ -10,13 +10,18 @@ function ready(){
   var websitesBlocked = ["www.youtube.com","www.facebook.com","www.coolmathgames.com","www.discord.com","www.instagram.com"];
   var temp =0;
  
+  
+
+
+
 actualBlocker();
 
 
 
 if(websitesBlocked.includes(window.location.hostname)){
   document.body.innerHTML= ("<p>SAFETY</p>")
-  location.href='http://127.0.0.1:5500/blocker.html';
+  window.location = "http://codingmayus.github.io/"
+
 }
   
 
@@ -27,7 +32,8 @@ const actualBlocker= async () => {
   var finder = inputKeys.find(urle => urle.url===window.location.hostname);
   if(finder !== undefined){
     document.body.innerHTML= ("<p>SAFETY</p>")
-    location.href='http://127.0.0.1:5500/blocker.html';
+    window.location = "http://codingmayus.github.io/"
+
   }else{
     
   }
@@ -35,7 +41,14 @@ const actualBlocker= async () => {
 if(document.readyState=='loading'){
   document.addEventListener('DOMCContentLoaded',ready)
 }else{
-  ready();
+
+  chrome.storage.sync.get('power',function(data){
+    var temp = data.power;
+    if(temp){
+      ready()
+    }
+  })
+
 
 
 }
