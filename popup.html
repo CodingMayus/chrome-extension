@@ -4,7 +4,8 @@
    <!--- <script src="popup.js"  async> </script>-->
    <script src="popup.js" async></script>
    <script src = "Content.js" async></script>
- 
+   <link rel="stylesheet" href="popup.css">
+
   </head>
   <body>
 
@@ -15,23 +16,28 @@
         </h1>
       </span>
     </div>
-<div id = "buttons">
-  <button id = "onoff">Start/pause</button>
-  <div>
-   <button id = "buttonadd">add</button>
-  </div>
 
-   <div>
-     <button id = "clear-url-btn">clear</button>
-   </div>
-   <div>
+<div id = "buttons">
+  <button id = "onoff">Toggle</button>
+
      <div>
        <button id = 'Motivation'>Motivation</button>
      </div>
-   <button id = "leaderboard">leaderboard</button>
-
    </div>
+   <div>
+    <button id = "buttonadd">add</button>
+   </div>
+ 
+    <div>
+      <button id = "clear-url-btn">clear</button>
+    </div>
+    <div>
+      <div>
+        <button id = "reset-btn">reset</button>
+      </div>
   
+      <span>Total minutes blocking: </span>
+      <span id = "bitnumber"></span>
   <!--hope to open up a page in which u can chosoe which to remove, using the chrome storage remove features-->
 
   
@@ -41,8 +47,7 @@
    <div id = 'url-div'></div>
    <div id = 'a' ></div>
    
-     <span>Bits: </span>
-     <span id = "bitnumber"></span>
+  
    
       
         
