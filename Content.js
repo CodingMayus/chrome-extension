@@ -18,11 +18,7 @@ actualBlocker();
 
 
 
-if(websitesBlocked.includes(window.location.hostname)){
-  document.body.innerHTML= ("<p>SAFETY</p>")
-  window.location = "http://codingmayus.github.io/"
 
-}
   
 
 }
@@ -32,7 +28,7 @@ const actualBlocker= async () => {
   var finder = inputKeys.find(urle => urle.url===window.location.hostname);
   if(finder !== undefined){
     document.body.innerHTML= ("<p>SAFETY</p>")
-    window.location = "http://codingmayus.github.io/"
+    window.location = "http://Social-Media-Blocker.github.io/"
 
   }else{
     
