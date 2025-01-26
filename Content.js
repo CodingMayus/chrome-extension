@@ -102,7 +102,7 @@ const actualBlocker= async () => {
   }
 }
 if(document.readyState=='loading'){
-  document.addEventListener('DOMCContentLoaded',ready);
+  document.addEventListener('DOMContentLoaded',ready);
 }else{
 
   // chrome.storage.sync.get('power',function(data){
