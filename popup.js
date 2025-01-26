@@ -82,6 +82,7 @@
              },
              () => {
                if (chrome.runtime.lastError) {
+                alert("Cannot create overlay on this page.  Please try on a different page! ");
                  console.error("Error injecting content script:", chrome.runtime.lastError.message);
                } else {
                  // Send the message after injecting the content script
