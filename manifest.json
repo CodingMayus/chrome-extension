@@ -3,7 +3,7 @@
   "name": "MiliBLOCK",
   "version": "3.0",
   "description": "MiliBLOCK is a browser extension that blocks unwanted content on the web while motivating you to stay focused on your dreams!",
-  "permissions": ["storage", "tabs","activeTab","scripting"],
+  "permissions": ["storage","activeTab","scripting"],
 
   "background": {
     "service_worker": "background.js"

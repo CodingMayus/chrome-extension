@@ -155,7 +155,7 @@ alert( arre[rand]);
         
 chrome.storage.sync.get("inputKeys",function(data){
   const inputKeys = data.inputKeys;
-    document.getElementById("buttonadd").addEventListener("click",function(){
+    document.getElementById("buttonadd").addEventListener("click",async function(){
       var inputName = prompt("Name of the website?  This referred to for the website.","input here");
       var input = prompt("Domain name/Website link to block","input here");
       var linkCheck = inputKeys.find(inputs=>inputs.url===input);
@@ -169,11 +169,11 @@ chrome.storage.sync.get("inputKeys",function(data){
 
       else{
         inputKeys.push({"name":inputName,"url":input});
-        chrome.storage.sync.set({"inputKeys":inputKeys});
-        renderWebsites();
-      }
+    await Promise.all([
+      chrome.storage.sync.set({"inputKeys":inputKeys}),
+      renderWebsites()
+    ]);     }
     })
-renderWebsites();
 })
     
     async function renderWebsites(){
